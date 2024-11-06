@@ -29,5 +29,6 @@
         system_config_path="$(arg system_config_path)" />
 
     <!-- gripper -->
+    <!-- SHOULD PASS robot_name AS PARAMETER/ARGUMENT -->
     <xacro:include filename="$(find lbr_description)/urdf/iiwa14_2f85/robotiq_2f_85_gripper.urdf.xacro" />
 </robot>

@@ -1,0 +1,25 @@
+moveit_setup_assistant_config:
+  urdf:
+    package: lbr_description
+    relative_path: urdf/iiwa14_2f85/iiwa14_2f85.xacro
+  srdf:
+    relative_path: config/iiwa14_2f85.srdf
+  package_settings:
+    author_name: Noar
+    author_email: noar421@yahoo.fr
+    generated_timestamp: 1730889266
+  control_xacro:
+    command:
+      - position
+    state:
+      - position
+      - velocity
+  modified_urdf:
+    xacros:
+      - control_xacro
+  control_xacro:
+    command:
+      - position
+    state:
+      - position
+      - velocity
