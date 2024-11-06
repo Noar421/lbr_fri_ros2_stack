@@ -1,8 +1,7 @@
 from typing import List
 
 import rclpy
-import math
-from geometry_msgs.msg import Point, Pose, Quaternion
+
 from moveit_msgs.action import MoveGroupSequence
 from moveit_msgs.msg import (
     BoundingVolume,
@@ -13,10 +12,12 @@ from moveit_msgs.msg import (
     PositionConstraint,
 )
 
+from std_msgs.msg import Header
+from shape_msgs.msg import SolidPrimitive
+from geometry_msgs.msg import Point, Pose, Quaternion
+
 from rclpy.action import ActionClient
 from rclpy.node import Node
-from shape_msgs.msg import SolidPrimitive
-from std_msgs.msg import Header
 
 class SequencedMotionCart(Node):
     def __init__(self, node_name: str, namespace: str = "lbr") -> None:
