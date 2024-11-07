@@ -291,7 +291,17 @@
             <origin xyz="0 0 0.035" rpy="0 0 0" />
         </joint>
 
+        <joint name="${robot_name}_joint_dummy_ee" type="fixed">
+            <parent link="${robot_name}_link_7" />
+            <child link="${robot_name}_link_dummy_ee" />
+            <origin xyz="0 0 0.135" rpy="0 0 0" />
+        </joint>
+
         <link name="${robot_name}_link_ee">
         </link>
+
+        <link name="${robot_name}_link_dummy_ee">
+        </link>
+
     </xacro:macro>
 </robot>

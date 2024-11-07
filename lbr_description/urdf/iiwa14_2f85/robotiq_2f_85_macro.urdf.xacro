@@ -293,5 +293,17 @@
             <origin xyz="-0.00563134 0.0 0.04718515" rpy="0 0 0" />
             <mimic joint="${prefix}robotiq_85_left_knuckle_joint" />
         </joint>
+
+
+        <joint name="${prefix}robotiq_85_tcp_joint" type="fixed">
+            <parent link="${prefix}robotiq_85_base_link" />
+            <child link="${prefix}robotiq_85_tcp_link" />
+            <axis xyz="0 -1 0" />
+            <origin xyz="0 0 0.135" rpy="0 0 0" />
+        </joint>
+
+        <link name="${prefix}robotiq_85_tcp_link">
+        </link>
+
     </xacro:macro>
 </robot>

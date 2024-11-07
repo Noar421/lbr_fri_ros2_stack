@@ -12,7 +12,10 @@
     <group name="arm">
         <chain base_link="lbr_link_0" tip_link="lbr_link_ee"/>
     </group>
-    <group name="hand">
+    <group name="arm_with_gripper">
+        <chain base_link="lbr_link_0" tip_link="lbr_link_dummy_ee"/>
+    </group>
+    <group name="gripper">
         <link name="robotiq_85_base_link"/>
         <link name="robotiq_85_left_inner_knuckle_link"/>
         <link name="robotiq_85_left_knuckle_link"/>
@@ -42,8 +45,14 @@
         <joint name="lbr_A6" value="0"/>
         <joint name="lbr_A7" value="0"/>
     </group_state>
+    <group_state name="open" group="gripper">
+        <joint name="robotiq_85_left_knuckle_joint" value="0"/>
+    </group_state>
+    <group_state name="close" group="gripper">
+        <joint name="robotiq_85_left_knuckle_joint" value="0.8"/>
+    </group_state>
     <!--END EFFECTOR: Purpose: Represent information about an end effector.-->
-    <end_effector name="hand" parent_link="lbr_link_ee" group="hand"/>
+    <end_effector name="gripper" parent_link="lbr_link_ee" group="gripper" parent_group="arm"/>
     <!--DISABLE COLLISIONS: By default it is assumed that any link of the robot could potentially come into collision with any other link in the robot. This tag disables collision checking between a specified pair of links. -->
     <disable_collisions link1="lbr_link_0" link2="lbr_link_1" reason="Adjacent"/>
     <disable_collisions link1="lbr_link_0" link2="lbr_link_2" reason="Never"/>
@@ -56,6 +65,7 @@
     <disable_collisions link1="lbr_link_1" link2="lbr_link_6" reason="Never"/>
     <disable_collisions link1="lbr_link_1" link2="lbr_link_7" reason="Never"/>
     <disable_collisions link1="lbr_link_1" link2="robotiq_85_left_knuckle_link" reason="Never"/>
+    <disable_collisions link1="lbr_link_1" link2="robotiq_85_right_knuckle_link" reason="Never"/>
     <disable_collisions link1="lbr_link_2" link2="lbr_link_3" reason="Adjacent"/>
     <disable_collisions link1="lbr_link_2" link2="lbr_link_4" reason="Never"/>
     <disable_collisions link1="lbr_link_2" link2="lbr_link_5" reason="Never"/>
@@ -67,6 +77,7 @@
     <disable_collisions link1="lbr_link_2" link2="robotiq_85_left_inner_knuckle_link" reason="Never"/>
     <disable_collisions link1="lbr_link_2" link2="robotiq_85_left_knuckle_link" reason="Never"/>
     <disable_collisions link1="lbr_link_2" link2="robotiq_85_right_finger_link" reason="Never"/>
+    <disable_collisions link1="lbr_link_2" link2="robotiq_85_right_finger_tip_link" reason="Never"/>
     <disable_collisions link1="lbr_link_2" link2="robotiq_85_right_inner_knuckle_link" reason="Never"/>
     <disable_collisions link1="lbr_link_2" link2="robotiq_85_right_knuckle_link" reason="Never"/>
     <disable_collisions link1="lbr_link_3" link2="lbr_link_4" reason="Adjacent"/>
