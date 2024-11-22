@@ -23,6 +23,8 @@ setup(
              "traj_planner = lbr_noar_py.moveit_traj_planner:main",
              "sequenced_motion_cart = lbr_noar_py.sequenced_motion_cart:main",
              "sequenced_motion_joint = lbr_noar_py.sequenced_motion_joint:main",
+             "unity_moveit_bridge_ptp = lbr_noar_py.unity_moveit_bridge_ptp:main",
+             "unity_moveit_bridge = lbr_noar_py.unity_moveit_bridge:main",
        ],
     },
 )

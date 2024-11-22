@@ -108,7 +108,6 @@ def main(args: List = None) -> None:
         Pose(position=Point(x=0.4, y=-0.2, z=0.6), orientation=Quaternion(x=0.0, y=1.0, z=0.0, w=0.0)),
         Pose(position=Point(x=0.3, y=-0.2, z=0.6), orientation=Quaternion(x=0.0, y=1.0, z=0.0, w=0.0)),
         Pose(position=Point(x=0.3, y=0.0, z=0.6), orientation=Quaternion(x=0.0, y=1.0, z=0.0, w=0.0)),
-        #     # add poses as needed
     ]
     sequenced_motion.execute_sequence(target_poses=target_poses)
     rclpy.shutdown()

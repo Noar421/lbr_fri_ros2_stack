@@ -19,7 +19,8 @@
         <!-- if we are simulating or directly communicating with the gripper we need a ros2 control instance -->
         <xacro:if value="${include_ros2_control}">
             <xacro:robotiq_gripper_ros2_control
-                name="${name}" prefix="${prefix}"
+                name="${name}"
+                prefix="${prefix}"
                 sim_gazebo="${sim_gazebo}"
                 sim_isaac="${sim_isaac}"
                 isaac_joint_commands="${isaac_joint_commands}"
